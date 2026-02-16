@@ -1,0 +1,260 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background: #000;
+  color: #22c55e;
+  overflow-x: hidden;
+}
+
+/* Terminal Grid System */
+.terminal-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.terminal-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.terminal-grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.terminal-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.terminal-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Terminal Cards */
+.terminal-card {
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.terminal-card:hover {
+  border-color: rgba(34, 197, 94, 0.6);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Terminal Typography */
+.terminal-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #22c55e;
+  text-shadow: 0 0 20px rgba(34, 197, 94, 0.8);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.terminal-subtitle {
+  font-size: 1.25rem;
+  color: #16a34a;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.terminal-text {
+  color: #22c55e;
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-text-dim {
+  color: #15803d;
+}
+
+.terminal-text-bright {
+  color: #86efac;
+}
+
+/* Terminal Effects */
+.terminal-glow {
+  text-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+}
+
+.terminal-scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.terminal-scanlines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(34, 197, 94, 0.1), transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.terminal-scanlines::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(34, 197, 94, 0.03) 2px,
+    rgba(34, 197, 94, 0.03) 4px
+  );
+  background-size: 100% 4px;
+}
+
+/* Window Controls */
+.terminal-window-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminal-window-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.terminal-window-dot.red { background: #ef4444; color: rgba(239, 68, 68, 0.5); }
+.terminal-window-dot.yellow { background: #eab308; color: rgba(234, 179, 8, 0.5); }
+.terminal-window-dot.green { background: #22c55e; color: rgba(34, 197, 94, 0.5); }
+
+/* Terminal Buttons */
+.terminal-btn {
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  padding: 0.25rem 0.75rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.terminal-btn:hover {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+/* Terminal Tables */
+.terminal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.terminal-table th {
+  text-align: left;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #15803d;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.terminal-table td {
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: #22c55e;
+  border-bottom: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.terminal-table tr:hover {
+  background: rgba(34, 197, 94, 0.05);
+}
+
+/* Terminal Tags */
+.terminal-tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  text-transform: uppercase;
+}
+
+/* Utility Classes */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-12 { margin-top: 3rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-8 { padding-left: 2rem; padding-right: 2rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.font-bold { font-weight: bold; }
+.uppercase { text-transform: uppercase; }
+.tracking-wider { letter-spacing: 0.05em; }
+.tracking-widest { letter-spacing: 0.1em; }
+.w-full { width: 100%; }
+.flex-1 { flex: 1; }
+.h-8 { height: 2rem; }
+.h-12 { height: 3rem; }
+.w-3 { width: 0.75rem; }
+.w-5 { width: 1.25rem; }
+.w-10 { width: 2.5rem; }
+.w-12 { width: 3rem; }
+.rounded { border-radius: 0.25rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-2xl { border-radius: 1rem; }
+.overflow-hidden { overflow: hidden; }
+.overflow-x-auto { overflow-x: auto; }
+.relative { position: relative; }
+.fixed { position: fixed; }
+.z-10 { z-index: 10; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.transition-all { transition: all 0.3s ease; }
+.text-center { text-align: center; }
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

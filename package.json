@@ -1,0 +1,25 @@
+{
+  "name": "agentcost",
+  "version": "0.1.0",
+  "description": "AI Coding Agent Cost & Audit SaaS",
+  "private": true,
+  "workspaces": [
+    "packages/cli",
+    "packages/dashboard", 
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:cli\" \"npm run dev:dashboard\"",
+    "dev:cli": "npm run dev --workspace=agentcost-cli",
+    "dev:dashboard": "npm run dev --workspace=agentcost-dashboard",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

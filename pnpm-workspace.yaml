@@ -1,0 +1,8 @@
+packages:
+  - packages/*
+
+ignoredBuiltDependencies:
+  - esbuild
+  - sharp
+  - sqlite3
+  - unrs-resolver

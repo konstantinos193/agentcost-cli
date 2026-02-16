@@ -1,0 +1,29 @@
+{
+  "name": "agentcost-dashboard",
+  "version": "0.1.0",
+  "description": "Web dashboard for AI agent cost tracking", 
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^16.1.6",
+    "react": "^19.2.4", 
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.1.18",
+    "recharts": "^3.7.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14", 
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.24",
+    "eslint": "^10.0.0",
+    "eslint-config-next": "^16.1.6", 
+    "postcss": "^8.5.6",
+    "typescript": "^5.9.3"
+  }
+}
