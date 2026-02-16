@@ -1,0 +1,48 @@
+critical:
+  description: Security issues or breaking bugs
+  color: d93f0b
+high:
+  description: Important features or major bugs
+  color: fc8a00
+medium:
+  description: Enhancements or minor bugs
+  color: fbca04
+low:
+  description: Nice-to-have or documentation
+  color: 0e8a16
+bug:
+  description: Something isn't working
+  color: d73a4a
+feature:
+  description: New feature or request
+  color: a2eeef
+documentation:
+  description: Docs or documentation updates
+  color: 0075ca
+security:
+  description: Security-related
+  color: 9c0303
+good first issue:
+  description: Good for newcomers
+  color: 7057ff
+help wanted:
+  description: Community help needed
+  color: 008672
+enhancement:
+  description: New functionality
+  color: a2eeef
+question:
+  description: Information or help request
+  color: d876e3
+wontfix:
+  description: Cannot or will not fix
+  color: ffffff
+duplicate:
+  description: Already exists elsewhere
+  color: cfd3d7
+invalid:
+  description: Doesn't work as intended
+  color: e11c21
+wontdo:
+  description: Won't implement
+  color: ffffff
